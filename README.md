@@ -23,6 +23,6 @@ function detect_text($projectId, $path)
 
 ##Important Point to note:
 
-⋅⋅* You have to create a service account and use the service account credentials
-⋅⋅* The returned data is pretty long. The first description contains the full text
-⋅⋅* Newlines are encoded as '\n'. It needs to be converted using nl2br function in PHP if it needs to be displayed in webpage
+* You have to create a service account and use the service account credentials
+* The returned data is pretty long. The first description contains the full text
+* Newlines are encoded as '\n'. It needs to be converted using nl2br function in PHP if it needs to be displayed in webpage
