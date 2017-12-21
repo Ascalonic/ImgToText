@@ -8,7 +8,7 @@ function detect_text($projectId, $path)
 {
     $vision = new VisionClient([
 		'keyFilePath' => 'cred.json',
-        'projectId' => $projectId
+        	'projectId' => $projectId
     ]);
     
     $image = $vision->image(file_get_contents($path), ['TEXT_DETECTION']);
@@ -16,7 +16,7 @@ function detect_text($projectId, $path)
     
     foreach ((array) $result->text() as $text) {
 		$ret=$text->description();
-        $app['monolog']->addDebug($text->description());
+        	$app['monolog']->addDebug($text->description());
     }
 }
 ```
