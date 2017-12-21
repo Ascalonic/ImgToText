@@ -1,7 +1,7 @@
 # ImgToText
 Image to Text converter using Google Vision API
 
-##Using Google Vision API for text detection:
+## Using Google Vision API for text detection:
 
 ```php
 function detect_text($projectId, $path)
@@ -21,7 +21,7 @@ function detect_text($projectId, $path)
 }
 ```
 
-##Important Point to note:
+## Important Point to note:
 
 * You have to create a service account and use the service account credentials
 * The returned data is pretty long. The first description contains the full text
