@@ -1,2 +1,2 @@
 # ImgToText
-Image to Text converted using Google Vision API
+Image to Text converter using Google Vision API
