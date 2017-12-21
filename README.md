@@ -21,7 +21,7 @@ function detect_text($projectId, $path)
 }
 ```
 
-## Important Point to note:
+## Important Points to note:
 
 * You have to create a service account and use the service account credentials
 * The returned data is pretty long. The first description contains the full text
