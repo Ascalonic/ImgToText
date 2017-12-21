@@ -1,0 +1,58 @@
+{% extends "layout.html" %}
+
+{% block imgupload %}
+ <div class="container" id="fileupload">
+	<div style="max-width: 650px; margin: auto;">
+		<h1 class="page-header">Image to Text Converter</h1>
+		<p class="lead">Select a PNG or JPEG image, having maximum size <span id="max-size"></span> KB.</p>
+
+        <form id="upload-image-form" action="" method="post" enctype="multipart/form-data">
+          <div id="image-preview-div" style="display: none">
+            <label for="exampleInputFile">Selected image:</label>
+            <br>
+            <img id="preview-img" src="noimage">
+          </div>
+          <div class="form-group">
+            <input type="file" name="file" id="file" required>
+          </div>
+          <button class="btn btn-lg btn-primary" id="upload-button" type="submit" disabled>Upload image</button>
+        </form>
+
+        <br>
+        <div class="alert alert-info" id="loading" style="display: none;" role="alert">
+			Uploading image...
+			<div class="progress">
+				<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+				</div>
+			</div>
+        </div>
+	<div id="message"></div>
+	</div>
+</div>
+
+ <div class="container" id="filecrop">
+	<h1 class="page-header">Image to Text Converter</h1>
+	<p class="lead">Select the area of the image to which the conversion is to be performed</p><br/>
+	
+	<canvas id="myCanvas" width="512" height="512" style="border:1px solid #000000;">
+	</canvas><br/>
+	
+	<button class="btn btn-lg btn-primary" id="convert-button">Convert</button>
+	
+	<a href="imgtotext"><button class="btn btn-lg btn-primary" id="another-button">Try Another Image</button></a>
+	
+	<div class="alert alert-info" id="converting" style="display: none;" role="alert">
+			Converting into Text...
+			<div class="progress">
+				<div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100" style="width: 100%">
+				</div>
+			</div>
+     </div>
+	 
+	 <br/>
+	 <div class="alert alert-success" id="conv_result"></div>
+	
+</div>
+
+
+{% endblock %}
